@@ -1,37 +1,631 @@
-## Welcome to GitHub Pages
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Joomla</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
 
-You can use the [editor on GitHub](https://github.com/SaraAhmed123/Joomla.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
 
-### Markdown
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
 
-```markdown
-Syntax highlighted code block
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
 
-# Header 1
-## Header 2
-### Header 3
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
 
-- Bulleted
-- List
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
 
-1. Numbered
-2. List
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
 
-**Bold** and _Italic_ and `Code` text
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
 
-[Link](url) and ![Image](src)
-```
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
 
-### Jekyll Themes
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/SaraAhmed123/Joomla.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
 
-### Support or Contact
+mark {
+	background-color: transparent;
+}
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="e3c11da5-e592-4b39-a47e-018eeefbfa8a" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🌋</span></div><h1 class="page-title">Joomla</h1></header><div class="page-body"><p id="0ae60e99-6a32-41c4-96d6-35993a1273b2" class="">There are 2 ways to connect Funnelll with Joomla Launch Website. We will cover both in this tutorial. </p><p id="940adc55-814d-4b53-8fc8-ace8aebbf767" class="">To get started, login or create an account on Funnelll.com</p><figure id="62b94392-a8f6-4071-b5bc-e0b1f040c8df" class="image"><a href="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-18_at_12.28.15_AM.png"><img style="width:2638px" src="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-18_at_12.28.15_AM.png"/></a></figure><p id="7bfe247b-7505-4843-81ff-164c710bf6af" class="">After logging in, input your website&#x27;s information</p><figure id="be94fdca-d4fc-4b08-a1d9-0aef591a09f3" class="image"><a href="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-18_at_12.31.18_AM.png"><img style="width:1416px" src="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-18_at_12.31.18_AM.png"/></a></figure><p id="b27ffbc5-82bd-454e-86d1-115427fc2f65" class="">After inputting your website&#x27;s information, the following page is where you connected your site with Funnelll.</p><p id="611caa09-7ca5-44e1-8d73-de53c99a1750" class=""><strong>First method: Adding Funnelll Code into your Joomla Site</strong></p><figure id="15af6f07-a718-479a-b5a7-56440cb36df6" class="image"><a href="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-18_at_12.32.28_AM.png"><img style="width:1810px" src="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-18_at_12.32.28_AM.png"/></a></figure><p id="9bcbd403-ce01-4426-8348-8bb2c5a9cad4" class="">You will see installation information and some code that needs to be added to your Joomla site. Leave this page open, you will need to paste this code later. </p><p id="9cd02415-12b2-4e91-b474-b4ebd48d0fa1" class="">To do this, head over to your Joomla Launch control panel. Click the Templates section on the Control Panel menu.</p><figure id="1ffc3229-e1fd-4215-aa7e-41213cf09621" class="image"><a href="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-18_at_12.45.56_AM.png"><img style="width:240px" src="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-18_at_12.45.56_AM.png"/></a></figure><p id="60cfdcfa-2510-48ec-8701-12d241294690" class="">Here you will see a gold star next to the name of Style is your default (in this case, that would be protostar), this is the template that will need to be edited in the Templates section. Click on Templates from the menu on the left.</p><figure id="6827f266-42df-4238-98f8-8768e7bdf1e1" class="image"><a href="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_9.24.27_PM.png"><img style="width:2248px" src="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_9.24.27_PM.png"/></a></figure><p id="3f1a0ead-f8a7-417b-93fc-d12565c9519b" class="">Look for your active template on this page and click on it. </p><figure id="736ccc04-91c3-4498-ae29-cad328158cf5" class="image"><a href="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_9.24.52_PM.png"><img style="width:2178px" src="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_9.24.52_PM.png"/></a></figure><p id="2ac2b5c7-e8fc-490c-a7c2-564e5e479181" class="">You will find various files of the template, locate the index.php file.</p><figure id="8ba1612d-3fcd-44de-9bab-94ca9a467a0c" class="image"><a href="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_9.25.18_PM.png"><img style="width:384px" src="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_9.25.18_PM.png"/></a></figure><p id="314fa063-6076-4ff0-b746-bdb44f8c9f94" class="">Scroll down in the index.php file until you spot the &lt;head&gt; tag in the code. This is were you will add the Funnelll code that you received during the Funnelll setup. </p><figure id="06c157f8-b127-4b9b-8c1a-adbd1d66cf12" class="image"><a href="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_9.25.40_PM.png"><img style="width:2024px" src="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_9.25.40_PM.png"/></a></figure><p id="5fc15132-cb90-4594-b6d7-e0a5de3249dc" class="">Paste the code as high up in the &lt;head&gt; tag as possible. Like this:</p><figure id="de8b6c46-43af-4c09-99fd-c515e9780a33" class="image"><a href="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_9.27.12_PM.png"><img style="width:2110px" src="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_9.27.12_PM.png"/></a></figure><p id="9b1ddcd2-821c-4fc4-bda3-b63b3ee249b5" class="">You should go back to the Funnelll site and click Verify to see if the installation was successful. You&#x27;re All Set! Now go ahead and setup Apps &amp; Integrations.</p><figure id="ccc59c31-59ed-404a-a053-433669a951c6" class="image"><a href="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_9.52.54_PM.png"><img style="width:1292px" src="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_9.52.54_PM.png"/></a></figure><p id="56f2a557-fbcb-4190-945b-0d6072820f4a" class="">
+</p><p id="6e66f9f2-c5ff-4238-a95a-2fd7be2f7bb9" class=""><strong>Second Method: Installing Google Tag Manager Extension to your Joomla Site</strong></p><p id="c4969c2c-1c29-477f-82dd-fef1098853de" class="">Locate the Extensions section on your Joomla Launch Control Panel.</p><p id="0b0f2d79-55dd-4478-9e88-48c0908c28bd" class="">Click on Extensions → Manage → Install </p><figure id="739e10c6-09b2-4c1b-9d47-8064399c1ca3" class="image"><a href="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_10.45.42_PM.png"><img style="width:1828px" src="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_10.45.42_PM.png"/></a></figure><p id="7a365e72-955b-4079-a19b-29ece80a7d79" class="">
+</p><p id="f1913ce6-4de4-4b19-8a9d-2dd79a490ab2" class="">You will search for &quot;Google Tag Manager&quot; under the &quot;Install from Web&quot; tab.</p><figure id="dac4d48d-171e-4a3e-a022-84f2e07f425e" class="image"><a href="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_10.47.33_PM.png"><img style="width:1438px" src="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_10.47.33_PM.png"/></a></figure><p id="2faa654f-4a29-41ae-9eaf-d9f4ef9de8c2" class="">
+</p><p id="d8be0b3c-8a46-48ec-a0f1-acb42beee593" class="">Install the following extension.</p><figure id="cfd09998-f26e-4626-b50b-6b649518b6f7" class="image"><a href="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_10.47.48_PM.png"><img style="width:1336px" src="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_10.47.48_PM.png"/></a></figure><p id="0ab5d302-fe24-404a-8136-281a39ba285e" class="">After a successful installation message, you need to Enable the extension in the Manage section. To do that, click on Manage from the left menu.</p><figure id="25315515-9514-4482-826c-b3a341b351d1" class="image"><a href="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-18_at_12.42.29_AM.png"><img style="width:1334px" src="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-18_at_12.42.29_AM.png"/></a></figure><p id="f8e1a2f1-833a-44cc-ba34-bc35065bd97e" class="">
+</p><p id="d6d99308-e3ab-404e-9fc6-df69c8c0eb0d" class="">Search for the Google Tag Manager and click on the red cross next to its name to enable it. </p><figure id="e762ab05-8360-4c70-907c-abe0c39131db" class="image"><a href="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_10.48.56_PM.png"><img style="width:1544px" src="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_10.48.56_PM.png"/></a></figure><p id="e0fe7e98-2c23-4cea-82ce-d3797aaa3df6" class="">After is has been enabled, you need to input your Google Tag Manager Container ID. To do that, locate the Plugins section from the Extensions tab from the top navigation bar.</p><figure id="9ab2b721-535e-4b5b-918a-1f159fd4526e" class="image"><a href="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_10.49.37_PM.png"><img style="width:962px" src="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_10.49.37_PM.png"/></a></figure><p id="e3c4b22b-8183-471d-997a-45100dd4a3ad" class="">Click on the Google Tag Manager to configure it.</p><figure id="274a1357-e1c0-446d-8dca-1902e01b3ec4" class="image"><a href="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_10.49.59_PM.png"><img style="width:1318px" src="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_10.49.59_PM.png"/></a></figure><p id="be085821-0509-4378-aaa3-3c21876ac915" class="">Add the Container ID (can find the container ID on google tag manager account) and hit save, you can now head back to the Funnelll and click Verify to check if installation is successful.</p><figure id="674ae71e-c7a9-4ccf-ac67-bd7eb97b4338" class="image"><a href="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_10.50.25_PM.png"><img style="width:1458px" src="Joomla%2062b94392a8f64071b5bce0b1f040c8df/Screen_Shot_2020-07-17_at_10.50.25_PM.png"/></a></figure></div></article></body></html>
